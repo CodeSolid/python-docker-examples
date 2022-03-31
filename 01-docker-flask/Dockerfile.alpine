@@ -1,9 +1,7 @@
-FROM python:3.10.4-slim-buster
-
+FROM python:3.10.4-alpine3.15
 RUN pip install --upgrade pip
 
-#RUN adduser -D myuser
-RUN useradd myuser
+RUN adduser -D myuser
 USER myuser
 WORKDIR /home/myuser
 
