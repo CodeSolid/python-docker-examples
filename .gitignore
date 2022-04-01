@@ -1,5 +1,7 @@
-
-
 # VS Code files; not needed for now
 package.json
 docker-examples.code-workspace
+
+# Developer notes
+notes.md
+

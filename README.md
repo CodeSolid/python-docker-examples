@@ -1,26 +1,31 @@
-# Docker Python Examples
+# Using Docker With Python: Companion Source
 
-## 1. A simple Flask Server in a container.
+This is the companion source for the article [How To Use Docker With Python](https://codesolid.com/how-to-use-docker-with-python/).
 
-See the article section, Running Python Flask in a Docker Container.
+## Part 1. A Simple Flask Server in a Container.
+
+Source:  01-docker-flask
+
+Usage:
+
+See the commands in the article, or use the Makefile
+
+```
+cd 01-docker-flask
+make build
+make run
+make browse
+```
+## Bonus, Alpine example:
 
 Usage:
 
 ```
+cd 02-docker-flask-alpine
+make build
+make run
+make browse
 ```
 
 
-## Other Docker commands
 
-```
-
-docker run -it python:3.10.4-alpine3.15 /sh
-docker run -it python:3.10.4-slim-buster /bin/bash
-docker build -t flask-example:latest .
-docker build -f Dockerfile.alpine -t flask-example:latest .
-docker run -it python:3.10.4-slim-buster /bin/bash
-
-docker run -d -p 80:8080 flask-example:latest
-
-docker run -d -p 80:8080 --name flask flask-example:latest
-```
