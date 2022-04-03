@@ -9,10 +9,10 @@ COPY --chown=myuser:myuser requirements.txt requirements.txt
 COPY --chown=myuser:myuser flaskapp.py flaskapp.py
 RUN pip install --user -r requirements.txt
 
-ENV PATH="/home/myuser/.local/bin:${PATH}"
+ENV PATH=/home/myuser/.local/bin:${PATH}
 
 COPY --chown=myuser:myuser . .
 ENV FLASK_APP=flaskapp
 ENV FLASK_RUN_PORT=8080
 ENV FLASK_RUN_HOST=0.0.0.0
-CMD ["flask", "run"]
+CMD [flask, run]
