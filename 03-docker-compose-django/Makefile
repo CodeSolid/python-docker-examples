@@ -6,7 +6,6 @@ up:
 down:
 	docker-compose down
 
-
 build:
 	docker build -t django-example:latest .
 
@@ -14,8 +13,8 @@ clean:
 	docker kill ```docker ps -q``` || true
 	docker rm -f ```docker ps -a -q``` || true
 	docker rm ```docker ps -a -q``` || true
-	# docker image prune -a -f || true
-	# docker image rm -f * || true
+	docker image prune -a -f || true
+	docker image rm -f * || true
 	rm -rf data
 	
 	
@@ -26,6 +25,10 @@ run:
 connect:
 	docker compose run frontend /bin/bash
 	# docker run -it --env-file ../secrets/secrets.txt --rm django-example /bin/bash
+
+connect_db:
+	docker compose run backend /bin/sh
+	
 
 browse:
 	# curl http://localhost

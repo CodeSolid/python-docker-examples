@@ -11,7 +11,9 @@ services:
 
   backend:
     env_file: ../secrets/secrets.txt
-    image: postgres:14.2-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.db
     restart: always
     volumes:
       - ./data/postgres/pgdata:/var/lib/postgresql/data/pgdata

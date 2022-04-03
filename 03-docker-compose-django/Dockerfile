@@ -2,6 +2,10 @@
 FROM python:3.10.4-slim-buster
 RUN pip install --upgrade pip
 
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get -y install libpq-dev
+
 RUN useradd myuser
 USER myuser
 WORKDIR /home/myuser
