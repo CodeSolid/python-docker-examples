@@ -88,8 +88,7 @@ DATABASES = {
         'USER': get_config('POSTGRES_USER'),
         'PASSWORD': get_config('POSTGRES_PASSWORD'),
         'HOST': get_config('POSTGRES_REMOTE_HOST'),
-        'PORT': get_config('POSTGRES_PORT'),
-
+        'PORT': get_config('POSTGRES_PORT')
     }
 }
 # Password validation

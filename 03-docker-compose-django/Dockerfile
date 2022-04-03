@@ -19,6 +19,6 @@ RUN chmod 766 start.sh
 RUN pip install --user -r requirements.txt
 
 ENV PATH=/home/myuser/.local/bin:${PATH}
-ENV POSTGRES_USER=${POSTGRES_USER}
+
 
 CMD ["./start.sh"]

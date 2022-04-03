@@ -1,3 +1,4 @@
+# docker-compose.yaml
 services:
   frontend:
     container_name: django
@@ -11,6 +12,5 @@ services:
     restart: always
     volumes:
       - ./data/postgres/pgdata:/var/lib/postgresql/data/pgdata
-      - ./codesolid_demo:/home/myuser
     ports: 
       - 5432:5432
