@@ -23,15 +23,12 @@ run:
 	docker run --name django --env-file ../secrets/secrets.txt  --rm django-example:latest
 
 connect:
-	docker compose run frontend /bin/bash
-	# docker run -it --env-file ../secrets/secrets.txt --rm django-example /bin/bash
+	docker compose run frontend /bin/bash	
 
 connect_db:
 	docker compose run backend /bin/sh
-	
 
-browse:
-	# curl http://localhost
+browse:	
 	open http://localhost
 
 kill:

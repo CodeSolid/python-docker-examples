@@ -12,7 +12,10 @@ WORKDIR /home/myuser
 
 COPY --chown=myuser:myuser requirements.txt requirements.txt
 COPY --chown=myuser:myuser ./codesolid_demo .
-copy --chown=myuser:myuser --chmod=744 start.sh start.sh
+copy --chown=myuser:myuser start.sh start.sh
+copy --chown=myuser:myuser init.py init.py
+RUN chmod 777 init.py
+RUN chmod 777 start.sh
 RUN pip install --user -r requirements.txt
 
 ENV PATH=/home/myuser/.local/bin:${PATH}
@@ -20,4 +23,4 @@ ENV POSTGRES_USER=${POSTGRES_USER}
 
 
 # CMD [flask, run]
-CMD [./start.sh]
+CMD ["./start.sh"]
