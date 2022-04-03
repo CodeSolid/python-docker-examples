@@ -1,10 +1,10 @@
 .PHONY: build run connect connect_db browse kill up
 
 up:
-	docker compose --env-file ../secrets/secrets.txt up --force-recreate 
+	docker compose --env-file ../secrets/secrets.txt up -d
 
 down:
-	docker-compose down
+	docker compose down
 
 build:
 	docker build -t django-example:latest .
