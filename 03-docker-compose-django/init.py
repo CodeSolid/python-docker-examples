@@ -1,3 +1,4 @@
+"""Create a superuser if one doesn't exist"""
 import django
 from codesolid_demo.config import get_config
 from django.contrib.auth import get_user_model
