@@ -6,7 +6,7 @@ RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y install libpq-dev
 
-RUN useradd myuser
+RUN useradd -m myuser
 USER myuser
 WORKDIR /home/myuser
 
