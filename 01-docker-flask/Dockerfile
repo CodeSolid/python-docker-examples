@@ -2,7 +2,7 @@
 FROM python:3.10.4-slim-buster
 RUN pip install --upgrade pip
 
-RUN useradd myuser
+RUN useradd -m myuser
 USER myuser
 WORKDIR /home/myuser
 
