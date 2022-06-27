@@ -44,5 +44,23 @@ make browse
 
 See the article for more details on the commands that are available or running without Gnu make.
 
+## Running SageMath in a Container:
+
+For more on this source, see the article [Python Docker Examples: SageMath in a Container](https://codesolid.com/python-docker-examples-sagemath-in-a-container/).
+
+Source: 04-docker-sagemath
+
+Usage:
+
+```
+cd 04-docker-sagemath
+# Building 
+./build.sh
+# Running the container
+./run.sh
+# Inside the container, use ./run_lab.sh to launch Jupyter Lab with Sage enabled.
+```
+
+
 
 
