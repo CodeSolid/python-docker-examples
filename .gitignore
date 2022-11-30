@@ -6,6 +6,7 @@
 **/data
 
 secrets
+private
 
 # VS Code files; not needed for now
 package.json
