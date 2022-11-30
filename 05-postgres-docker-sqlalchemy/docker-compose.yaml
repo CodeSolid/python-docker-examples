@@ -1,7 +1,7 @@
 # docker-compose.yaml
 services:
-  tests:
-    container_name: django
+  client:
+    container_name: client
     env_file: ../private/secrets.txt
     build:
       context: .
