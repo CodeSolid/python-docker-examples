@@ -1,2 +1,0 @@
-# Postgresql, Docker and SqlAlchemy
-
